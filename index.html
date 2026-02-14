@@ -136,7 +136,25 @@ body.dark-mode #footer p.copyright {
 
 /* Mobile Adjustments */
 @media screen and (max-width: 736px) {
-    #mode-toggle { position: relative; margin: 20px auto; display: block; width: 90%; }
+    /* 1. Shrink the button so it doesn't block the sky */
+    #mode-toggle { 
+        position: relative; 
+        margin: 10px auto 30px auto; 
+        display: block; 
+        width: 60%; /* Smaller width looks more 'tech' and less 'banner' */
+        font-size: 0.6rem;
+        z-index: 5; /* Lowered so rings can pass over it */
+    }
+
+    /* 2. Force the rings to the front */
+    .resonance-ring, .resonance-ring-harmonic {
+        z-index: 20 !important; /* Higher than the toggle and logo */
+    }
+}
+
+/* 3. Global update to ensure rings stay visible over everything */
+.resonance-ring, .resonance-ring-harmonic {
+    pointer-events: none; /* Crucial so they don't block you from clicking buttons */
 }
 /* Scanline effect for images */
 article .image.main img {
