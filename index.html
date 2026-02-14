@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Kai AXL Marine Resources</title>
+	<title>Kai AXL</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,10 +17,53 @@
 	<link rel="icon" href="images/water-drop-only-logo-ico.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="images/water-drop-only-logo-ico.ico" />
 	<link rel="apple-touch-icon" href="images/water-drop-only-logo-ico.ico" />
+	<style>
+body.dark-mode {
+    background-color: #0b0e11; /* Carbon fiber black */
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+    color: #00f5ff; /* Electric Cyan */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Courier New", Courier, monospace; /* Engineering vibe */
+}
+
+body.dark-mode article {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.1); /* Subtle reactor glow */
+}
+
+body.dark-mode a {
+    color: #00f5ff;
+}
+
+body.dark-mode strong {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0, 245, 255, 0.5);
+}
+
+/* The Toggle Button Style */
+#mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    padding: 10px;
+    background: #00f5ff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: monospace;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); /* Angular/Metal shape */
+} </style>
 </head>
 
 <body class="is-preload">
-
+<button id="mode-toggle">SYSTEM: DARK MODE</button>
 	<!-- Wrapper -->
 	<div id="wrapper">
 
@@ -33,14 +76,15 @@
 			<div class="content">
 				<div class="inner">
 					<h1>Kai AXL</h1>
-					<p>Harvesting the Future of the Circular Blue Economy</p>
+					<p>An Appetite for Extraction</p>
+					<p>Rocking the metals out with AI-driven electrochemistry</p>
 				</div>
 			</div>
 			<nav>
 				<ul>
 					<li><a href="#intro">Intro</a></li>
 					<li><a href="#work">Mission</a></li>
-					<li><a href="#about">Minerals & Water</a></li>
+					<li><a href="#about">Metal & H20</a></li>
 					<li><a href="#services">Technology</a></li>
 					<li><a href="#contact">Contact</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
@@ -54,62 +98,51 @@
 			<!-- Intro -->
 			<article id="intro">
 				<h2 class="major">Intro</h2>
-				<div style="height: 300px;" class="image main"><img style="object-fit:none;" src="images/kbay-site.jpg" alt="" /></div>
-				<h3>An Appetite for Extraction</h3>
-				<p>Kai AXL is a deep-tech venture based in Kaneohe, Hawaii, reimagining the relationship between
-					industrial recovery and environmental stewardship. We don’t just process resources; we "tune" into
-					them. By combining electrochemical precision with circular economic principles, we are securing the
-					clean energy supply chain while protecting our most precious local resource: fresh water.</p>
+				<div style="height: 300px;" class="image main"><img style="object-fit:none;" src="images/kbay-site.jpg" alt="Kaneohe Bay Field Site" /></div>
+				<h3>Welcome to the Jungle of Innovation</h3>
+				<p>Kai AXL is a woman-owned deep-tech venture based in Kaneohe, Hawaii. We are architecting a future where industrial recovery and island grace exist in perfect harmony. We don’t just process resources; we "tune" into them. By combining the molecular rigor of Stanford Engineering with the digital scalability of Silicon Valley systems architecture, we are securing the clean energy supply chain while protecting our most precious local gift: fresh water.</p>
 			</article>
 
 			<!-- Work -->
 			<article id="work">
 				<h2 class="major">Mission</h2>
-				<span class="image main"><img style="object-fit: contain;" src="images/tlogo.png" alt="" /></span>
-				<h3>A Commitment to Conservation</h3>
-				<p>Traditional desalination and mining are often at odds with the environment. Our mission is to prove
-					they don't have to be. Through Zero-Liquid-Discharge (ZLD) technology, Kai AXL transforms "waste"
-					into wealth. We are dedicated to providing Hawaii and the Pacific with a resilient, localized source
-					of critical minerals and fresh water—eliminating the land footprint and the environmental cost of
-					traditional extraction.</p>
+				<span class="image main"><img style="object-fit: contain;" src="images/tlogo.png" alt="Kai AXL Logo" /></span>
+				<h3>Sovereignty in Paradise</h3>
+				<p>In a world where the oceans are clean and the metals are pretty, traditional mining is a relic of the past. Our mission is to prove that resource extraction doesn't have to be a scar on the earth. Through Zero-Liquid-Discharge (ZLD) technology, Kai AXL transforms saltwater into strategic wealth. We are dedicated to providing the Pacific with a resilient, localized source of critical minerals—eliminating the land footprint and environmental cost of traditional mining so our islands stay autonomous and beautiful.</p>
 			</article>
 
 			<!-- About -->
 			<article id="about">
-				<h2 class="major">Minerals & Water </h2>
-				<span class="image main"><img src="images/water.jpg" style="object-fit: fill;" alt="" /></span>
-				<h3>Dual-Stream Security</h3>
-				<p>We treat the ocean as a comprehensive resource library, not a waste bin. </p>
+				<h2 class="major">Metals & H20</h2>
+				<span class="image main"><img src="images/water.jpg" style="object-fit: fill;" alt="Kaneohe Field Site" /></span>
+				<h3>The Ocean Asteroid</h3>
+				<p>We treat the Pacific as a comprehensive resource library. Our AXL Pods perform an endless harmony of recovery, ensuring nothing is wasted and everything is valued: </p>
 					<ul>
-						<li><strong>Battery-Grade Minerals:</strong> Our process targets high-value Lithium and Magnesium, essential for the global transition to renewable energy.</li>
-						<li><strong>Fresh Water:</strong> By harvesting the minerals that make desalination brine "toxic," we produce agriculture-grade fresh water as a primary byproduct.</li>
-						<li><strong>Local Co-Products:</strong> Our modular pods are designed to yield high-purity industrial Oxygen and gourmet-grade sea salt, creating a truly circular local economy.</li>
+						<li><strong>Battery-Grade Minerals:</strong> High-purity Lithium and Magnesium, precision extraction to meet the high standards of the global energy transition.</li>
+						<li><strong>Fresh Water (H<sub>2</sub>O):</strong> By harvesting the minerals that make desalination brine "toxic," we produce agriculture-grade fresh water as a primary byproduct.</li>
+						<li><strong>Hawaiian Salts & Oxygen (O<sub>2</sub>):</strong> From gourmet culinary salts to industrial-grade O<sub>2</sub>, we ensure every molecule is honored in a truly circular economy.</li>
 					</ul>
 			</article>
 
 			<!-- Services -->
 			<article id="services">
 				<h2 class="major">Technology</h2>
-				<span class="image main"><img src="images/kbrs.jpg" alt="" /></span>
+				<span class="image main"><img src="images/kbrs.jpg" alt="Kaneohe Bay Field Site" /></span>
 				<h3>The AXL Nucleolus™</h3>
-				<p>At the core of Kai AXL is a proprietary, frequency-selective electrochemical reactor. Unlike
-					traditional membranes that clog or fail, our system uses "ion resonance" to selectively target and
-					recover specific elements from the water column.</p>
+				<p>At the core of Kai AXL is a proprietary, frequency-selective electrochemical reactor. Our Autonomous X-traction Ligand (AXL) technology uses ion resonance to treat the water column with surgical precision.</p>
 					<ul>
-						<li><strong>Low Energy:</strong> Optimized for integration with renewable energy grids.</li>
-						<li><strong>Modular:</strong> Scalable "pods" designed for rapid deployment in littoral environments.</li>
-						<li><strong>Validated:</strong> Built on a foundation of UCLA Bio-Sciences and evolving through Chemical Engineering at Stanford University; currently moving from validated theory to localized field testing in Kaneohe Bay.</li>
+						<li><strong>Software-Defined Chemistry:</strong> An autonomous feedback loop harmonizes the reactor in real-time.</li>
+						<li><strong>Modular & Discrete:</strong> Scalable "pods" designed for rapid deployment in littoral environments.</li>
+						<li><strong>Architectural Lock:</strong> Built on a foundation of UCLA Bio-Sciences and evolving through Stanford University MS Chemical Engineering; currently transitioning from theoretical modeling to active field-site integration in Kaneohe Bay.</li>
 					</ul>
 			</article>
 
 				<!-- Contact -->
 				<article id="contact">
 					<h2 class="major">Contact</h2>
-					<span class="image main"><img src="images/rainbow.jpg" style="object-fit: scale-down;" alt="" /></span>
-					<h3>Join the Movement</h3>
-					<p>We are currently in the "Lab-to-Market" phase and seeking strategic partners in Hawaii’s water,
-						energy, and environmental sectors. Whether you are a stakeholder at the Board of Water Supply, a
-						potential pilot partner, or a fellow researcher, we’d love to connect.</p>
+					<span class="image main"><img src="images/rainbow.jpg" style="object-fit: scale-down;" alt="Kaneohe Rainbow" /></span>
+					<h3>Encore: Join the Movement</h3>
+					<p>We are currently in the "Lab-to-Market" phase and seeking strategic partners who believe in a future that rocks. Whether you are a stakeholder in Hawaii’s energy sector, a potential pilot partner, or a fellow researcher—let’s connect and build a paradise that is as resilient as it is beautiful.</p>
 					<form method="post" action="https://formspree.io/f/xgolkwll">
 						<div class="fields">
 							<div class="field half">
@@ -159,6 +192,18 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
+	<script>
+        const btn = document.getElementById('mode-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                btn.textContent = "SYSTEM: LIGHT MODE";
+            } else {
+                btn.textContent = "SYSTEM: DARK MODE";
+            }
+        });
+    </script>
 
 </body>
 
