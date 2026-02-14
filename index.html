@@ -1,143 +1,97 @@
 <!DOCTYPE HTML>
 <!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Kai AXL Marine Resources
+	Ocean Mineral Extraction | Kaneohe, Hawaii
+	Built with Dimension template by HTML5 UP (html5up.net)
 -->
-<html>
+<html lang="en">
 
 <head>
-	<title>Kai AXL</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	
+	<!-- Primary Meta Tags -->
+	<title>Kai AXL | Ocean Mineral Extraction</title>
+	<meta name="title" content="Kai AXL | Ocean Mineral Extraction" />
+	<meta name="description" content="Extracting lithium, magnesium, and fresh water from seawater using AI-driven electrochemistry. Zero-liquid-discharge ocean mineral extraction based in Kaneohe, Hawaii." />
+	<meta name="keywords" content="ocean extraction, lithium extraction, seawater mining, desalination, Hawaii clean energy, electrochemistry, critical minerals, AXL Nucleolus" />
+	<meta name="author" content="Kai AXL Marine Resources LLC" />
+	
+	<!-- Open Graph / Facebook / LinkedIn -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://kaiaxl.com/" />
+	<meta property="og:title" content="Kai AXL | Ocean Mineral Extraction" />
+	<meta property="og:description" content="Extracting lithium and fresh water from seawater using frequency-selective electrochemistry. Based in Kaneohe, Hawaii." />
+	<meta property="og:image" content="https://kaiaxl.com/images/tlogo.png" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://kaiaxl.com/" />
+	<meta property="twitter:title" content="Kai AXL | Ocean Mineral Extraction" />
+	<meta property="twitter:description" content="AI-driven electrochemistry for seawater mineral recovery and desalination." />
+	<meta property="twitter:image" content="https://kaiaxl.com/images/tlogo.png" />
+
+	<!-- Stylesheets -->
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/custom.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+	
+	<!-- Favicons -->
 	<link rel="icon" href="images/water-drop-only-logo-ico.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="images/water-drop-only-logo-ico.ico" />
 	<link rel="apple-touch-icon" href="images/water-drop-only-logo-ico.ico" />
-	
-	<style>
-		I see exactly what's happening. The Dimension template uses a very specific "overlay" system in its main.css that is fighting our new code. When we trigger Dark Mode, it's effectively doubling up on the filters and turning the background into a solid, opaque block.
 
-Since you're a chemical engineer, think of this like a solubility limit: we've added too many CSS layers, and the "transparency" has crashed out of the solution.
+	<!-- Structured Data for Google -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Kai AXL Marine Resources",
+		"description": "Ocean mineral extraction using frequency-selective electrochemistry",
+		"url": "https://kaiaxl.com",
+		"logo": "https://kaiaxl.com/images/tlogo.png",
+		"foundingDate": "2026",
+		"founders": [{
+			"@type": "Person",
+			"name": "Samantha Seligman"
+		}],
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Kaneohe",
+			"addressRegion": "HI",
+			"addressCountry": "US"
+		},
+		"sameAs": [
+			"https://www.linkedin.com/in/samantha-belle-seligman-b696a164/"
+		]
+	}
+	</script>
 
-The "Surgical" Fix
-I have rewritten the Dark Mode engine to deactivate the template's default black overlay and replace it with our own "Clear Stealth" version.
-
-Replace your entire <style> block with this version:
-
-CSS
-<style>
-/* 1. GLOBAL & NAV */
-nav ul li a, .logo, #mode-toggle, h2, h3 {
-    font-weight: 900 !important;
-    letter-spacing: 0.25rem !important;
-    text-transform: uppercase;
-}
-
-nav ul li a {
-    color: #ffffff !important;
-    border: 1px solid rgba(255,255,255,0.2) !important;
-    background: rgba(255,255,255,0.05);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-nav ul li a:hover {
-    background: rgba(0, 245, 255, 0.15) !important;
-    border-color: #00f5ff !important;
-    box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
-}
-
-/* 2. THE SYSTEM TOGGLE */
-#mode-toggle {
-    position: fixed;
-    top: 30px; right: 30px; z-index: 10000;
-    padding: 12px 24px;
-    background: linear-gradient(135deg, rgba(0, 245, 255, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
-    backdrop-filter: blur(10px);
-    border: 1px solid #00f5ff;
-    color: #00f5ff;
-    font-family: monospace;
-    font-size: 0.7rem;
-    cursor: pointer;
-    clip-path: polygon(10% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%, 0% 30%);
-}
-
-/* 3. LOGO & RESONANCE */
-.logo {
-    position: relative;
-    display: flex; align-items: center; justify-content: center;
-    width: 6.5rem; height: 6.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 2px solid #00f5ff;
-    border-radius: 100%;
-    margin: 0 auto 2.5rem auto;
-}
-
-.resonance-ring, .resonance-ring-harmonic {
-    position: absolute; top: 50%; left: 50%;
-    width: 100%; height: 100%; border-radius: 50%;
-    pointer-events: none; z-index: -1;
-}
-
-.resonance-ring {
-    border: 2px solid rgba(0, 245, 255, 0.5);
-    animation: sonar-pulse 4s infinite;
-}
-
-@keyframes sonar-pulse {
-    0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    100% { opacity: 0; transform: translate(-50%, -50%) scale(3.8); }
-}
-
-/* 4. THE MASTER DARK MODE FIX (FIREFOX COMPATIBLE) */
-
-/* Kill the solid grey/black background wall */
-body.dark-mode {
-    background-color: #000 !important; /* Base color */
-}
-
-/* Force the Dimension template's default overlay to be transparent */
-body.dark-mode #bg:before {
-    background-image: none !important;
-    background-color: rgba(0, 0, 0, 0.5) !important; /* This is the 'sunglasses' layer */
-    opacity: 1 !important;
-}
-
-/* Ensure the background image itself doesn't disappear */
-body.dark-mode #bg {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-/* Article Panels: 'Smoked Lab Glass' */
-body.dark-mode #main article {
-    background: rgba(10, 15, 20, 0.85) !important;
-    backdrop-filter: blur(20px) !important;
-    border: 1px solid rgba(0, 245, 255, 0.3) !important;
-}
-
-/* Glow Text */
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-    color: #00f5ff !important;
-    text-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
-}
-
-body.dark-mode p, body.dark-mode li {
-    color: #e0e0e0 !important;
-}
-
-/* Footer Fix */
-#footer p.copyright { color: rgba(255, 255, 255, 0.5); font-size: 0.7rem; }
-body.dark-mode #footer p.copyright { color: #00f5ff !important; } 
- </style>
+	<!-- Google Analytics - REPLACE G-XXXXXXXXXX WITH YOUR TRACKING ID -->
+	<!-- Get your ID from analytics.google.com -->
+	<!--
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-XXXXXXXXXX');
+	</script>
+	-->
 </head>
 
 <body class="is-preload">
-<button id="mode-toggle">SYSTEM: DARK MODE</button>
+
+	<!-- Dark Mode Toggle Button -->
+	<button 
+		id="mode-toggle" 
+		aria-label="Toggle dark mode"
+		aria-pressed="false"
+	>
+		SYSTEM: DARK MODE
+	</button>
 
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -145,10 +99,13 @@ body.dark-mode #footer p.copyright { color: #00f5ff !important; }
 		<!-- Header -->
 		<header id="header">
 			<div class="logo">
-				<img style="padding:8px; width: 100%; height: 100%; object-fit: contain;" src="images/water-drop-only-logo.png" alt="Kai AXL Logo" />
+				<img 
+					style="padding:8px; width: 100%; height: 100%; object-fit: contain;" 
+					src="images/water-drop-only-logo.png" 
+					alt="Kai AXL Logo" 
+				/>
 				<div class="resonance-ring"></div>
-    			<div class="resonance-ring-harmonic"></div>
-				<!-- <span class="icon fa-gem"></span> -->
+				<div class="resonance-ring-harmonic"></div>
 			</div>
 			<div class="content">
 				<div class="inner">
@@ -164,7 +121,6 @@ body.dark-mode #footer p.copyright { color: #00f5ff !important; }
 					<li><a href="#metals-h2o">Metals & H2O</a></li>
 					<li><a href="#technology">Technology</a></li>
 					<li><a href="#contact">Contact</a></li>
-					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
 			</nav>
 		</header>
@@ -175,92 +131,128 @@ body.dark-mode #footer p.copyright { color: #00f5ff !important; }
 			<!-- Intro -->
 			<article id="intro">
 				<h2 class="major">Intro</h2>
-				<div style="height: 300px;" class="image main"><img style="object-fit:none;" src="images/kbay-site.jpg" alt="Kaneohe Bay Field Site" /></div>
+				<div style="height: 300px;" class="image main">
+					<img 
+						style="object-fit:none;" 
+						src="images/kbay-site.jpg" 
+						alt="Kaneohe Bay Field Site"
+						loading="lazy" 
+					/>
+				</div>
 				<h3>Welcome to the Jungle of Innovation</h3>
-				<p>Kai AXL is a woman-owned deep-tech venture based in Kaneohe, Hawaii. We are architecting a future where industrial recovery and island grace exist in perfect harmony. We don’t just process resources; we "tune" into them. By combining the molecular rigor of Stanford Engineering with the digital scalability of Silicon Valley systems architecture, we are securing the clean energy supply chain while protecting our most precious local gift: fresh water.</p>
+				<p>Kai AXL is a woman-owned deep-tech venture based in Kaneohe, Hawaii. We are architecting a future where industrial recovery and island grace exist in perfect harmony. We don't just process resources; we "tune" into them. By combining the molecular rigor of Stanford Engineering with the digital scalability of Silicon Valley systems architecture, we are securing the clean energy supply chain while protecting our most precious local gift: fresh water.</p>
 			</article>
 
-			<!-- Work -->
+			<!-- Mission -->
 			<article id="mission">
 				<h2 class="major">Mission</h2>
-				<span class="image main"><img style="object-fit: contain;" src="images/tlogo.png" alt="Kai AXL Logo" /></span>
+				<span class="image main">
+					<img 
+						style="object-fit: contain;" 
+						src="images/tlogo.png" 
+						alt="Kai AXL Logo"
+						loading="lazy" 
+					/>
+				</span>
 				<h3>Sovereignty in Paradise</h3>
 				<p>In a world where the oceans are clean and the metals are pretty, traditional mining is a relic of the past. Our mission is to prove that resource extraction doesn't have to be a scar on the earth. Through Zero-Liquid-Discharge (ZLD) technology, Kai AXL transforms saltwater into strategic wealth. We are dedicated to providing the Pacific with a resilient, localized source of critical minerals—eliminating the land footprint and environmental cost of traditional mining so our islands stay autonomous and beautiful.</p>
 			</article>
 
-			<!-- About -->
+			<!-- Metals & H2O -->
 			<article id="metals-h2o">
 				<h2 class="major">Metals & H2O</h2>
-				<span class="image main"><img src="images/water.jpg" style="object-fit: fill;" alt="Kaneohe Field Site" /></span>
+				<span class="image main">
+					<img 
+						src="images/water.jpg" 
+						style="object-fit: fill;" 
+						alt="Kaneohe Field Site"
+						loading="lazy" 
+					/>
+				</span>
 				<h3>The Ocean Asteroid</h3>
-				<p>We treat the Pacific as a comprehensive resource library. Our AXL Pods perform an endless harmony of recovery, ensuring nothing is wasted and everything is valued: </p>
-					<ul>
-						<li><strong>Battery-Grade Minerals:</strong> High-purity Lithium and Magnesium, precision extraction to meet the high standards of the global energy transition.</li>
-						<li><strong>Fresh Water (H<sub>2</sub>O):</strong> By harvesting the minerals that make desalination brine "toxic," we produce agriculture-grade fresh water as a primary byproduct.</li>
-						<li><strong>Hawaiian Salts & Oxygen (O<sub>2</sub>):</strong> From gourmet culinary salts to industrial-grade O<sub>2</sub>, we ensure every molecule is honored in a truly circular economy.</li>
-					</ul>
+				<p>We treat the Pacific as a comprehensive resource library. Our AXL Pods perform an endless harmony of recovery, ensuring nothing is wasted and everything is valued:</p>
+				<ul>
+					<li><strong>Battery-Grade Minerals:</strong> High-purity Lithium and Magnesium, precision extraction to meet the high standards of the global energy transition.</li>
+					<li><strong>Fresh Water (H<sub>2</sub>O):</strong> By harvesting the minerals that make desalination brine "toxic," we produce agriculture-grade fresh water as a primary byproduct.</li>
+					<li><strong>Hawaiian Salts & Oxygen (O<sub>2</sub>):</strong> From gourmet culinary salts to industrial-grade O<sub>2</sub>, we ensure every molecule is honored in a truly circular economy.</li>
+				</ul>
 			</article>
 
-			<!-- Services -->
+			<!-- Technology -->
 			<article id="technology">
 				<h2 class="major">Technology</h2>
-				<span class="image main"><img src="images/kbrs.jpg" alt="Kaneohe Bay Field Site" /></span>
+				<span class="image main">
+					<img 
+						src="images/kbrs.jpg" 
+						alt="Kaneohe Bay Field Site"
+						loading="lazy" 
+					/>
+				</span>
 				<h3>The AXL Nucleolus™</h3>
 				<p>At the core of Kai AXL is a proprietary, frequency-selective electrochemical reactor. Our Autonomous X-traction Ligand (AXL) technology uses ion resonance to treat the water column with surgical precision.</p>
-					<ul>
-						<li><strong>Software-Defined Chemistry:</strong> An autonomous feedback loop harmonizes the reactor in real-time.</li>
-						<li><strong>Modular & Discrete:</strong> Scalable "pods" designed for rapid deployment in littoral environments.</li>
-						<li><strong>Architectural Lock:</strong> Built on a foundation of UCLA Bio-Sciences and evolving through Stanford University MS Chemical Engineering; currently transitioning from theoretical modeling to active field-site integration in Kaneohe Bay.</li>
-					</ul>
+				<ul>
+					<li><strong>Software-Defined Chemistry:</strong> An autonomous feedback loop harmonizes the reactor in real-time.</li>
+					<li><strong>Modular & Discrete:</strong> Scalable "pods" designed for rapid deployment in littoral environments.</li>
+					<li><strong>Architectural Lock:</strong> Built on a foundation of UCLA Bio-Sciences and evolving through Stanford University MS Chemical Engineering; currently transitioning from theoretical modeling to active field-site integration in Kaneohe Bay.</li>
+				</ul>
 			</article>
 
-				<!-- Contact -->
-				<article id="contact">
-					<h2 class="major">Contact</h2>
-					<span class="image main"><img src="images/rainbow.jpg" style="object-fit: scale-down;" alt="Kaneohe Rainbow" /></span>
-					<h3>Encore: Join the Movement</h3>
-					<p>We are currently in the "Lab-to-Market" phase and seeking strategic partners who believe in a future that rocks. Whether you are a stakeholder in Hawaii’s energy sector, a potential pilot partner, or a fellow researcher—let’s connect and build a paradise that is as resilient as it is beautiful.</p>
-					<form method="post" action="https://formspree.io/f/xgolkwll">
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="email" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="4"></textarea>
-							</div>
+			<!-- Contact -->
+			<article id="contact">
+				<h2 class="major">Contact</h2>
+				<span class="image main">
+					<img 
+						src="images/rainbow.jpg" 
+						style="object-fit: scale-down;" 
+						alt="Kaneohe Rainbow"
+						loading="lazy" 
+					/>
+				</span>
+				<h3>Encore: Join the Movement</h3>
+				<p>We are currently in the "Lab-to-Market" phase and seeking strategic partners who believe in a future that rocks. Whether you are a stakeholder in Hawaii's energy sector, a potential pilot partner, or a fellow researcher—let's connect and build a paradise that is as resilient as it is beautiful.</p>
+				
+				<form method="post" action="https://formspree.io/f/xgolkwll">
+					<div class="fields">
+						<!-- Honeypot spam protection (hidden field) -->
+						<div style="position:absolute;left:-5000px;" aria-hidden="true">
+							<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
 						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" class="primary" /></li>
-							<li><input type="reset" value="Reset" /></li>
-						</ul>
-					</form>
-					<ul class="icons">
-						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li> -->
+						
+						<div class="field half">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" required />
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" required />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="4" required></textarea>
+						</div>
+					</div>
+					
+					<!-- Hidden fields for Formspree -->
+					<input type="hidden" name="_next" value="https://kaiaxl.com#contact" />
+					<input type="hidden" name="_subject" value="New contact from kaiaxl.com" />
+					
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" class="primary" /></li>
+						<li><input type="reset" value="Reset" /></li>
 					</ul>
-				</article>
-
-	
+				</form>
+			</article>
 
 		</div>
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">&copy; 2026 Kai AXL Marine Resources LLC Design: <a href="https://kaiaxl.com">Kai
-					AXL</a></p>
+			<p class="copyright">&copy; 2026 Kai AXL Marine Resources LLC | Design: <a href="https://kaiaxl.com">Kai AXL</a></p>
 		</footer>
 
 	</div>
 
-	<!-- BG -->
+	<!-- Background -->
 	<div id="bg"></div>
 
 	<!-- Scripts -->
@@ -270,18 +262,53 @@ body.dark-mode #footer p.copyright { color: #00f5ff !important; }
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 
+	<!-- Custom JavaScript -->
 	<script>
-        const btn = document.getElementById('mode-toggle');
-        btn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                btn.textContent = "SYSTEM: LIGHT MODE";
-            } else {
-                btn.textContent = "SYSTEM: DARK MODE";
-            }
-        });
-    </script>
+		// ========================================
+		// DARK MODE WITH PERSISTENCE
+		// ========================================
+		const btn = document.getElementById('mode-toggle');
+
+		// Check for saved preference on page load
+		const savedMode = localStorage.getItem('darkMode');
+		if (savedMode === 'enabled') {
+			document.body.classList.add('dark-mode');
+			btn.textContent = "SYSTEM: LIGHT MODE";
+			btn.setAttribute('aria-pressed', 'true');
+		}
+
+		// Toggle dark mode on button click
+		btn.addEventListener('click', () => {
+			const isDark = document.body.classList.toggle('dark-mode');
+			
+			// Update button text and accessibility
+			btn.textContent = isDark ? "SYSTEM: LIGHT MODE" : "SYSTEM: DARK MODE";
+			btn.setAttribute('aria-pressed', isDark);
+			
+			// Save preference to localStorage
+			localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+		});
+
+		// ========================================
+		// MOBILE VIEWPORT HEIGHT FIX
+		// ========================================
+		function setVh() {
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		}
+
+		setVh();
+		window.addEventListener('resize', setVh);
+		window.addEventListener('orientationchange', setVh);
+
+		// ========================================
+		// LOADING STATE MANAGEMENT
+		// ========================================
+		window.addEventListener('load', () => {
+			document.body.classList.remove('is-preload');
+			document.body.classList.add('is-loaded');
+		});
+	</script>
 
 </body>
-
 </html>
