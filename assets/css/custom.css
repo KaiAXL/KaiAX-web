@@ -1,0 +1,579 @@
+/* ========================================
+   KAI AXL CUSTOM STYLES - PRODUCTION v3.0
+   PROMINENT TAGLINE EDITION
+   Optimized for VC/DoD/NSF Presentations
+   ======================================== */
+
+/* ========================================
+   1. GLOBAL TYPOGRAPHY & HIERARCHY
+   ======================================== */
+
+/* Nav buttons - professional weight */
+nav ul li a, 
+.logo, 
+#mode-toggle {
+    font-weight: 700 !important;
+    letter-spacing: 0.15rem !important;
+    text-transform: uppercase;
+}
+
+/* Headers - strong but not aggressive */
+h2, h3 {
+    font-weight: 700 !important;
+    letter-spacing: 0.2rem !important;
+    text-transform: uppercase;
+}
+
+/* Navigation - premium glass effect with micro-interactions */
+nav ul li a {
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    background: rgba(255,255,255,0.05);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav ul li a:hover {
+    background: rgba(0, 119, 182, 0.4) !important;  /* Brighter */
+    border-color: #00f5ff !important;  /* Pure cyan */
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.6);  /* Stronger glow */
+}
+
+/* ========================================
+   2. DARK MODE TOGGLE BUTTON
+   ======================================== */
+
+#mode-toggle {
+    position: fixed;
+    top: 30px; 
+    right: 30px; 
+    z-index: 10000;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, rgba(0, 119, 182, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid #0077b6;
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 0.7rem;
+    cursor: pointer;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%, 0% 30%);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+#mode-toggle:hover {
+    background: linear-gradient(135deg, rgba(0, 119, 182, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+    box-shadow: 0 0 20px rgba(0, 119, 182, 0.6);
+    border-color: #00f5ff;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   3. LOGO & RESONANCE ANIMATION
+   ======================================== */
+
+.logo {
+    position: relative;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    width: 6.5rem; 
+    height: 6.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 119, 182, 0.6);
+    border-radius: 100%;
+    margin: 0 auto 2.5rem auto;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    border-color: #00f5ff;
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.resonance-ring, 
+.resonance-ring-harmonic {
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%;
+    pointer-events: none; 
+    z-index: -1;
+}
+
+.resonance-ring {
+    border: 2px solid rgba(0, 119, 182, 0.5);
+    animation: sonar-pulse 4s infinite;
+}
+
+@keyframes sonar-pulse {
+    0% { 
+        opacity: 1; 
+        transform: translate(-50%, -50%) scale(1); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translate(-50%, -50%) scale(3.8); 
+    }
+}
+
+.resonance-ring-harmonic {
+    border: 1px solid rgba(0, 119, 182, 0.3);
+    animation: sonar-pulse 6s infinite, breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+/* ========================================
+   4. LIGHT MODE (DEFAULT) - PROFESSIONAL
+   ======================================== */
+
+/* Background - let Kaneohe shine */
+body:not(.dark-mode) #bg:before {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.12) 0%,
+        rgba(0, 0, 0, 0.05) 30%,
+        rgba(0, 119, 182, 0.08) 60%,
+        rgba(0, 0, 0, 0.20) 100%
+    ) !important;
+    opacity: 1 !important;
+}
+
+body:not(.dark-mode) #bg {
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: brightness(1.05) contrast(1.1) saturate(1.15);
+}
+
+/* Premium black glass panels */
+body:not(.dark-mode) #main article {
+    background: rgba(0, 0, 0, 0.75) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    border: 1px solid rgba(0, 119, 182, 0.4) !important;
+    box-shadow: 
+        0 8px 32px rgba(0, 119, 182, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Typography hierarchy - LIGHT MODE */
+body:not(.dark-mode) h1 {
+    color: #ffffff !important;
+    text-shadow: 
+        0 3px 12px rgba(0, 0, 0, 0.8),
+        0 0 35px rgba(255, 255, 255, 0.5),
+        0 0 18px rgba(0, 119, 182, 0.4);
+    font-weight: 900 !important;
+}
+
+body:not(.dark-mode) h2 {
+    color: #0077b6 !important;
+    text-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.3),
+        0 0 15px rgba(0, 119, 182, 0.4);
+}
+
+body:not(.dark-mode) h3 {
+    color: #48cae4 !important;
+    text-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 10px rgba(72, 202, 228, 0.3);
+}
+
+/* ========================================
+   TAGLINE - PROMINENT IN LIGHT MODE
+   THIS IS YOUR BRAND - MAKE IT VISIBLE
+   ======================================== */
+
+body:not(.dark-mode) .content p {
+    color: #00f5ff !important;  /* Bright cyan - unified brand message */
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.1rem !important;
+    line-height: 1.6 !important;
+    text-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.9),
+        0 0 25px rgba(0, 245, 255, 0.6),
+        0 0 12px rgba(0, 245, 255, 0.8);
+    margin: 0.5rem 0 !important;
+    text-transform: uppercase;
+}
+
+/* First tagline - "An Appetite for Extraction" - extra emphasis */
+body:not(.dark-mode) .content p:first-of-type {
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.15rem !important;
+    /* Same color, just larger/bolder */
+}
+
+/* Body text - readable on black panels */
+body:not(.dark-mode) #main article p, 
+body:not(.dark-mode) #main article li {
+    color: #caf0f8 !important;
+    line-height: 1.7;
+}
+
+/* Strong elements (list labels) */
+body:not(.dark-mode) #main article strong {
+    color: #00f5ff !important;
+    text-shadow: 0 0 8px rgba(0, 245, 255, 0.3);
+}
+
+/* Links in panels */
+body:not(.dark-mode) #main article a {
+    color: #00f5ff !important;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 245, 255, 0.3);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body:not(.dark-mode) #main article a:hover {
+    color: #48cae4 !important;
+    border-bottom-color: #00f5ff;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+}
+
+/* Footer - MAXIMUM VISIBILITY */
+body:not(.dark-mode) #footer {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    padding: 30px 0;
+}
+
+body:not(.dark-mode) #footer p.copyright {
+    color: #ffffff !important;
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    text-shadow: 
+        0 3px 10px rgba(0, 0, 0, 1),
+        0 0 25px rgba(0, 119, 182, 0.7),
+        0 0 5px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: inline-block;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 119, 182, 0.3);
+}
+
+body:not(.dark-mode) #footer p.copyright a {
+    color: #00f5ff !important;
+    text-shadow: 
+        0 0 15px rgba(0, 245, 255, 0.8),
+        0 2px 5px rgba(0, 0, 0, 0.7);
+    font-weight: 900;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body:not(.dark-mode) #footer p.copyright a:hover {
+    color: #48cae4 !important;
+    text-shadow: 
+        0 0 25px rgba(0, 245, 255, 1),
+        0 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+/* ========================================
+   5. DARK MODE - CYAN NEON
+   ======================================== */
+
+body.dark-mode {
+    background-color: #000 !important;
+}
+
+body.dark-mode #bg:before {
+    background-image: none !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    opacity: 1 !important;
+}
+
+body.dark-mode #bg {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body.dark-mode #main article {
+    background: rgba(10, 15, 20, 0.85) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(0, 245, 255, 0.3) !important;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+    color: #00f5ff !important;
+    text-shadow: 
+        0 0 25px rgba(0, 245, 255, 0.7),
+        0 0 50px rgba(0, 245, 255, 0.3);
+}
+
+/* ========================================
+   TAGLINE - PROMINENT IN DARK MODE
+   EQUAL VISIBILITY ACROSS BOTH MODES
+   ======================================== */
+
+body.dark-mode .content p {
+    color: #ffffff !important;  /* Pure white - unified message, contrasts with cyan KAI AXL */
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.1rem !important;
+    line-height: 1.6 !important;
+    text-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(255, 255, 255, 0.4),
+        0 0 10px rgba(255, 255, 255, 0.3);
+    margin: 0.5rem 0 !important;
+    text-transform: uppercase;
+    opacity: 1 !important;
+}
+
+/* First tagline - "An Appetite for Extraction" - extra emphasis in dark mode */
+body.dark-mode .content p:first-of-type {
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.15rem !important;
+    /* Same color, just larger/bolder */
+}
+
+body.dark-mode p, 
+body.dark-mode li {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode #main article a {
+    color: #00f5ff !important;
+    border-bottom: 1px solid rgba(0, 245, 255, 0.3);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark-mode #main article a:hover {
+    border-bottom-color: #00f5ff;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.6);
+}
+
+/* Footer - DARK MODE */
+body.dark-mode #footer {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    padding: 30px 0;
+}
+
+body.dark-mode #footer p.copyright { 
+    color: #00f5ff !important;
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    text-shadow: 
+        0 3px 10px rgba(0, 0, 0, 1),
+        0 0 25px rgba(0, 245, 255, 0.8),
+        0 0 5px rgba(0, 245, 255, 0.5);
+    letter-spacing: 0.1rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: inline-block;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 245, 255, 0.4);
+}
+
+body.dark-mode #footer p.copyright a {
+    color: #ffffff !important;
+    text-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 2px 5px rgba(0, 0, 0, 0.7);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark-mode #footer p.copyright a:hover {
+    color: #00f5ff !important;
+    text-shadow: 
+        0 0 30px rgba(0, 245, 255, 1),
+        0 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+body.dark-mode .logo {
+    border-color: #00f5ff;
+}
+
+body.dark-mode .resonance-ring {
+    border-color: rgba(0, 245, 255, 0.5);
+}
+
+/* ========================================
+   6. MOBILE VIEWPORT FIX
+   ======================================== */
+
+:root {
+    --vh: 1vh;
+}
+
+@supports (-webkit-touch-callout: none) {
+    #wrapper {
+        min-height: -webkit-fill-available;
+    }
+}
+
+body {
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+}
+
+/* ========================================
+   7. LOADING ANIMATIONS
+   ======================================== */
+
+body.is-preload * {
+    animation-delay: 0s !important;
+    transition: none !important;
+}
+
+body.is-loaded #header {
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   8. RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media screen and (max-width: 980px) {
+    /* Tagline remains prominent on tablets */
+    body:not(.dark-mode) .content p,
+    body.dark-mode .content p {
+        font-size: 1.0rem !important;
+    }
+    
+    body:not(.dark-mode) .content p:first-of-type,
+    body.dark-mode .content p:first-of-type {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    /* Tagline still visible on mobile */
+    body:not(.dark-mode) .content p,
+    body.dark-mode .content p {
+        font-size: 0.9rem !important;
+        letter-spacing: 0.08rem !important;
+    }
+    
+    body:not(.dark-mode) .content p:first-of-type,
+    body.dark-mode .content p:first-of-type {
+        font-size: 1.0rem !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #mode-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 8px 16px;
+        font-size: 0.65rem;
+    }
+    
+    body:not(.dark-mode) #footer p.copyright,
+    body.dark-mode #footer p.copyright {
+        font-size: 0.75rem !important;
+        padding: 8px 16px;
+    }
+    
+    /* Tagline minimum size on smallest screens */
+    body:not(.dark-mode) .content p,
+    body.dark-mode .content p {
+        font-size: 0.85rem !important;
+    }
+    
+    body:not(.dark-mode) .content p:first-of-type,
+    body.dark-mode .content p:first-of-type {
+        font-size: 0.95rem !important;
+    }
+}
+
+/* ========================================
+   9. SMOOTH TRANSITIONS (OPTIMIZED)
+   ======================================== */
+
+body, 
+#bg, 
+#bg:before, 
+#main article, 
+h1, h2, h3, 
+p, li,
+#footer,
+#footer p.copyright,
+.logo {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fast transitions for interactive elements */
+nav ul li a,
+#mode-toggle,
+#main article a,
+#footer p.copyright a {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ========================================
+   10. ACCESSIBILITY & FOCUS STATES
+   ======================================== */
+
+nav ul li a:focus,
+#mode-toggle:focus,
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: 2px solid #00f5ff;
+    outline-offset: 2px;
+}
+
+/* ========================================
+   11. PRINT STYLES (FOR PDF EXPORTS)
+   ======================================== */
+
+@media print {
+    #mode-toggle,
+    #bg,
+    nav {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+    }
+    
+    #main article {
+        background: white !important;
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+    }
+    
+    .content p {
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+}
