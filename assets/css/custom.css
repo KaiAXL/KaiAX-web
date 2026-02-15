@@ -489,16 +489,25 @@ body.is-loaded #header {
 
 @media screen and (max-width: 480px) {
     #mode-toggle {
-        top: 15px;
-        right: 15px;
-        padding: 8px 16px;
+        top: auto;  /* Remove top positioning */
+        bottom: 20px;  /* Position at bottom */
+        right: auto;  /* Remove right positioning */
+        left: 50%;  /* Center horizontally */
+        transform: translateX(-50%);  /* Perfect centering */
+        padding: 10px 20px;
         font-size: 0.65rem;
+        z-index: 10001;  /* Above footer */
+    }
+    
+    #mode-toggle:hover {
+        transform: translateX(-50%) translateY(-2px);  /* Maintain centering on hover */
     }
     
     body:not(.dark-mode) #footer p.copyright,
     body.dark-mode #footer p.copyright {
         font-size: 0.75rem !important;
         padding: 8px 16px;
+        margin-bottom: 60px;  /* Add space for toggle button */
     }
     
     /* Tagline minimum size on smallest screens */
